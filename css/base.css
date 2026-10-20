@@ -1,129 +1,19 @@
-/* ==========================================================================
-   CSS Reset & Variables
-   ========================================================================== */
-*, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    -webkit-tap-highlight-color: transparent;
-}
-
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
 :root {
-    /* Foundation Variables - Overridden by themes.css */
     --sys-font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    
-    /* Spacing & Sizing */
-    --spacing-xs: 4px;
-    --spacing-sm: 8px;
-    --spacing-md: 16px;
-    --spacing-lg: 24px;
-    --spacing-xl: 32px;
-    
-    --radius-sm: 12px;
-    --radius-md: 20px;
-    --radius-lg: 28px;
-    --radius-round: 9999px;
-    
-    /* Spring Animations */
-    --spring-fast: 250ms cubic-bezier(0.2, 0.8, 0.2, 1);
-    --spring-bouncy: 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
-    --spring-smooth: 300ms cubic-bezier(0.25, 0.1, 0.25, 1);
+    --spacing-xs: 4px; --spacing-sm: 8px; --spacing-md: 16px; --spacing-lg: 24px; --spacing-xl: 32px;
+    --radius-sm: 12px; --radius-md: 20px; --radius-lg: 28px; --radius-round: 9999px;
+    --spring-fast: 250ms cubic-bezier(0.2, 0.8, 0.2, 1); --spring-bouncy: 400ms cubic-bezier(0.34, 1.56, 0.64, 1); --spring-smooth: 300ms cubic-bezier(0.25, 0.1, 0.25, 1);
+    --bg-base: #050505; --text-primary: #ffffff; --text-secondary: #a1a1a6;
 }
-
-/* ==========================================================================
-   Base Elements
-   ========================================================================== */
-html {
-    font-family: var(--sys-font);
-    font-size: 16px;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    scroll-behavior: smooth;
-    /* Default light mode fallback */
-    --bg-base: #f5f5f7;
-    --text-primary: #1d1d1f;
-    --text-secondary: #86868b;
-}
-
-@media (prefers-color-scheme: dark) {
-    html {
-        --bg-base: #000000;
-        --text-primary: #f5f5f7;
-        --text-secondary: #a1a1a6;
-    }
-}
-
-body {
-    background-color: var(--bg-base);
-    color: var(--text-primary);
-    min-height: 100vh;
-    min-height: 100dvh;
-    overflow-x: hidden;
-    position: relative;
-}
-
-/* ==========================================================================
-   Layout Structure
-   ========================================================================== */
-.app-container {
-    max-width: 640px;
-    margin: 0 auto;
-    padding: var(--spacing-md);
-    padding-top: calc(var(--spacing-xl) + env(safe-area-inset-top));
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-lg);
-    position: relative;
-    z-index: 2; /* Above background layer */
-}
-
-.content-container {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-md);
-}
-
-.safe-area-spacer {
-    height: calc(80px + env(safe-area-inset-bottom));
-}
-
-/* ==========================================================================
-   Typography
-   ========================================================================== */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 600;
-    letter-spacing: -0.02em;
-}
-
-p {
-    line-height: 1.5;
-}
-
-/* ==========================================================================
-   Accessibility & Reduced Motion
-   ========================================================================== */
-@media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
-}
-
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
-}
-::-webkit-scrollbar-track {
-    background: transparent;
-}
-::-webkit-scrollbar-thumb {
-    background: rgba(150, 150, 150, 0.3);
-    border-radius: var(--radius-round);
-}
-::-webkit-scrollbar-thumb:hover {
-    background: rgba(150, 150, 150, 0.5);
-}
+html { font-family: var(--sys-font); font-size: 16px; -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+body { background-color: var(--bg-base); color: var(--text-primary); min-height: 100vh; min-height: 100dvh; overflow-x: hidden; position: relative; }
+.app-container { max-width: 640px; margin: 0 auto; padding: var(--spacing-md); padding-top: calc(var(--spacing-xl) + env(safe-area-inset-top)); display: flex; flex-direction: column; gap: var(--spacing-lg); position: relative; z-index: 2; }
+.content-container { display: flex; flex-direction: column; gap: var(--spacing-md); }
+.safe-area-spacer { height: calc(80px + env(safe-area-inset-bottom)); }
+h1, h2, h3, h4, h5, h6 { font-weight: 600; letter-spacing: -0.02em; }
+p { line-height: 1.5; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(150, 150, 150, 0.3); border-radius: var(--radius-round); }
