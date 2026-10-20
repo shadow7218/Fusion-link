@@ -1,0 +1,47 @@
+{
+  "name": "Link in Bio",
+  "short_name": "Link Hub",
+  "description": "Personal hub and links.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f5f5f7",
+  "theme_color": "#1d1d1f",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Share Profile",
+      "short_name": "Share",
+      "description": "Share your Link in Bio",
+      "url": "/index.html?action=share",
+      "icons": [{ "src": "icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Show QR Code",
+      "short_name": "QR Code",
+      "description": "Display your QR code",
+      "url": "/index.html?action=qr",
+      "icons": [{ "src": "icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Settings",
+      "short_name": "Settings",
+      "description": "Edit your profile and links",
+      "url": "/index.html?action=settings",
+      "icons": [{ "src": "icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}
