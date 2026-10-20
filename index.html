@@ -4,76 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
     
-    <!-- SEO & Open Graph Placeholders -->
-    <title>Link in Bio</title>
-    <meta name="description" content="Personal hub and links.">
-    <meta property="og:title" content="Link in Bio">
-    <meta property="og:description" content="Personal hub and links.">
-    <meta property="og:image" content="">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    
-    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#1d1d1f" media="(prefers-color-scheme: dark)">
+    <title>Fusion | Wallpapers</title>
+    <meta name="description" content="Premium wallpapers & digital art by Fusion.">
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
     
     <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="icon-192.png">
-
-    <!-- CSS Files -->
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/glass.css">
     <link rel="stylesheet" href="css/themes.css">
     <link rel="stylesheet" href="css/links.css">
+    <link rel="stylesheet" href="css/widgets.css">
 </head>
 <body>
-    <!-- Animated Mesh Gradient Background Layer -->
+    <!-- Background -->
     <div class="background-layer" id="app-background">
         <div class="mesh-blob blob-1"></div>
         <div class="mesh-blob blob-2"></div>
         <div class="mesh-blob blob-3"></div>
     </div>
 
-    <!-- Main Application Container -->
+    <!-- Top Navigation -->
+    <header class="top-nav">
+        <div class="brand-logo">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <div class="top-actions">
+            <button class="glass-icon-btn" id="btn-theme" aria-label="Theme"></button>
+            <button class="glass-icon-btn" id="btn-mode" aria-label="Mode"></button>
+            <button class="glass-icon-btn" id="btn-share" aria-label="Share"></button>
+            <button class="glass-icon-btn" id="btn-qr" aria-label="QR"></button>
+            <button class="glass-icon-btn" id="btn-settings" aria-label="Settings"></button>
+        </div>
+    </header>
+
+    <!-- Main App -->
     <div class="app-container" id="app-container">
         
-        <!-- Profile Header -->
+        <!-- Profile -->
         <header class="profile-card glass-card" id="profile-section">
             <div class="avatar-container">
                 <div class="avatar-ring"></div>
-                <img src="" alt="Profile Picture" class="avatar-img" id="profile-avatar" style="display:none;">
+                <img src="" alt="Fusion" class="avatar-img" id="profile-avatar" style="display:none;">
             </div>
             <h1 class="profile-name" id="profile-name"></h1>
             <p class="profile-bio" id="profile-bio"></p>
-            
-            <div id="announcement-container"></div>
             <div class="social-icons-container" id="social-icons"></div>
         </header>
 
-        <!-- Main Content: Blocks and Links -->
+        <!-- Content Area -->
         <main class="content-container">
-            <div class="blocks-container" id="blocks-list" style="display: flex; flex-direction: column; gap: var(--spacing-md);"></div>
+            <!-- Links First -->
             <div class="links-container" id="links-list"></div>
+
+            <!-- Spotify & Extra Blocks -->
+            <div class="blocks-container" id="blocks-list"></div>
         </main>
 
-        <!-- Floating Action Buttons -->
-        <div class="fab-container">
-            <button class="glass-icon-btn" id="btn-theme" aria-label="Cycle Theme" title="Cycle Theme (T)"></button>
-            <button class="glass-icon-btn" id="btn-mode" aria-label="Toggle Dark/Light" title="Toggle Mode (D)"></button>
-            <button class="glass-icon-btn" id="btn-share" aria-label="Share" title="Share (S)"></button>
-            <button class="glass-icon-btn" id="btn-qr" aria-label="QR Code" title="QR Code (Q)"></button>
-            <button class="glass-icon-btn" id="btn-settings" aria-label="Settings" title="Settings"></button>
-        </div>
-
-        <!-- Safe Area Spacer -->
         <div class="safe-area-spacer"></div>
     </div>
 
-    <!-- Modals, Drawers, and Toasts Root -->
     <div id="modal-root"></div>
     <div id="drawer-root"></div>
     <div id="toast-container"></div>
 
-    <!-- JS Entry Point -->
     <script type="module" src="js/app.js"></script>
 </body>
 </html>
