@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- SEO & Open Graph Placeholders -->
+    <title>Link in Bio</title>
+    <meta name="description" content="Personal hub and links.">
+    <meta property="og:title" content="Link in Bio">
+    <meta property="og:description" content="Personal hub and links.">
+    <meta property="og:image" content="">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1d1d1f" media="(prefers-color-scheme: dark)">
+    
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icon-192.png">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/glass.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/links.css">
+</head>
+<body>
+    <!-- Animated Mesh Gradient Background Layer -->
+    <div class="background-layer" id="app-background">
+        <div class="mesh-blob blob-1"></div>
+        <div class="mesh-blob blob-2"></div>
+        <div class="mesh-blob blob-3"></div>
+    </div>
+
+    <!-- Main Application Container -->
+    <div class="app-container" id="app-container">
+        
+        <!-- Profile Header -->
+        <header class="profile-card glass-card" id="profile-section">
+            <div class="avatar-container">
+                <div class="avatar-ring"></div>
+                <img src="" alt="Profile Picture" class="avatar-img" id="profile-avatar" style="display:none;">
+            </div>
+            <h1 class="profile-name" id="profile-name"></h1>
+            <p class="profile-bio" id="profile-bio"></p>
+            
+            <div id="announcement-container"></div>
+            <div class="social-icons-container" id="social-icons"></div>
+        </header>
+
+        <!-- Main Content: Blocks and Links -->
+        <main class="content-container">
+            <div class="blocks-container" id="blocks-list" style="display: flex; flex-direction: column; gap: var(--spacing-md);"></div>
+            <div class="links-container" id="links-list"></div>
+        </main>
+
+        <!-- Floating Action Buttons -->
+        <div class="fab-container">
+            <button class="glass-icon-btn" id="btn-theme" aria-label="Cycle Theme" title="Cycle Theme (T)"></button>
+            <button class="glass-icon-btn" id="btn-mode" aria-label="Toggle Dark/Light" title="Toggle Mode (D)"></button>
+            <button class="glass-icon-btn" id="btn-share" aria-label="Share" title="Share (S)"></button>
+            <button class="glass-icon-btn" id="btn-qr" aria-label="QR Code" title="QR Code (Q)"></button>
+            <button class="glass-icon-btn" id="btn-settings" aria-label="Settings" title="Settings"></button>
+        </div>
+
+        <!-- Safe Area Spacer -->
+        <div class="safe-area-spacer"></div>
+    </div>
+
+    <!-- Modals, Drawers, and Toasts Root -->
+    <div id="modal-root"></div>
+    <div id="drawer-root"></div>
+    <div id="toast-container"></div>
+
+    <!-- JS Entry Point -->
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
